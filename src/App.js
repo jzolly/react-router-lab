@@ -15,6 +15,9 @@ import logo from './logo.svg';
 // Style Components
 import './App.css';
 
+// Route
+import { Route } from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
