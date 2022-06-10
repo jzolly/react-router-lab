@@ -1,4 +1,18 @@
+// UI Components
+import Nav from './components/Nav';
+
+// Page Components
+import About from './pages/About';
+import IStock from './pages/IStock';
+import Stocks from './pages/Stocks';
+
+// Data Component
+import stocks from './data';
+
+// Library Components
 import logo from './logo.svg';
+
+// Style Components
 import './App.css';
 
 function App() {
