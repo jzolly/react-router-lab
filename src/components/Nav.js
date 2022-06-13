@@ -4,13 +4,13 @@ const Nav = (props) => {
     return (
         <div className='nav'>
             <Link to="/">
-                <div>iStocks</div>
-            </Link>
-            <Link to="/stocks">
-                <div>Stocks</div>
+                <div id='logoHome'>iStocks</div>
             </Link>
             <Link to="/about">
-                <div>About</div>
+                <div className='navSub'>About</div>
+            </Link>
+            <Link to="/stocks">
+                <div className='navSub'>Stocks</div>
             </Link>
         </div>
     );
