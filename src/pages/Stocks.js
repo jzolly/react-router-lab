@@ -1,11 +1,21 @@
 import { Link } from 'react-router-dom';
 import stocks from '../data';
 
+
 const Stocks = (props) => {
     return (
-        // <h1>Stocks Display</h1>
-        // <h3>Name: {stocks.name}</h3>
-        // <h3>Price: {stocks.lastPrice}</h3>
+        <div>
+            <ul>
+                {stocks.map((company, index) => {
+                    const { name, symbol } =company;
+                    return(
+                        <Link key={index} to={`/price/${symbol}`}>
+                            <li>{name}</li>
+                        </Link>
+                    )
+                })}
+            </ul>
+        </div>
     );
 }
 

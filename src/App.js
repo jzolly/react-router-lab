@@ -5,9 +5,10 @@ import Nav from './components/Nav';
 import About from './pages/About';
 import IStock from './pages/IStock';
 import Stocks from './pages/Stocks';
+import Price from './pages/Price';
 
 // Data Component
-import stocks from './data';
+import stockData from './data';
 
 // Library Components
 import logo from './logo.svg';
@@ -29,11 +30,13 @@ function App() {
         <About />
       </Route>
       <Route  path="/stocks">
-        <Stocks/>
-      </Route>
-      {/* <Route  path="/stocks/:symbol">
-        <Stocks/>
-      </Route> */}
+        <Stocks stocks={stockData}/>
+      </Route>     
+      <Route  path="/price/:symbol" render={
+        (renderProps) => {
+          return <Price match={renderProps.match}/>
+          }}/>  
+     
     </div>
   );
 }
