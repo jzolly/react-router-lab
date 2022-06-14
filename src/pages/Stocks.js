@@ -7,7 +7,7 @@ const Stocks = (props) => {
         <div>
             <ul>
                 {stocks.map((company, index) => {
-                    const { name, symbol } =company;
+                    const { name, symbol } = company;
                     return(
                         <Link key={index} to={`/price/${symbol}`}>
                             <li>{name}</li>

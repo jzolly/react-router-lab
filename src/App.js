@@ -33,8 +33,8 @@ function App() {
         <Stocks stocks={stockData}/>
       </Route>     
       <Route  path="/price/:symbol" render={
-        (renderProps) => {
-          return <Price match={renderProps.match}/>
+          (renderProps) => {
+          return <Price stocks={stockData} {...renderProps}/>
           }}/>  
      
     </div>

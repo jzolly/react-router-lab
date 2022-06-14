@@ -1,18 +1,12 @@
-import { useState, useEffect } from 'react';
-import stocks from '../data';
-
-const Price = ({match}) => {
-    const symbol = match.params.symbol.filter;
-    // const [company, setCompany] = useState (null);
-    // const getCompany = async () => {
-    //     const response = await fetch
-    //      response.json();
-    //     setCompany(data);
-    // };
+const Price = (props) => {
+    const symbol = props.match.params.symbol;
+    const company = props.stocks.find(ele => ele.symbol === symbol);
+    console.log(company);
+    
     return (
         <div>
-            <h3>Name: {stocks.name}</h3>
-            <h3>Price: {stocks.lastPrice}</h3>
+            <h3>Name: {company.name}</h3>
+            <h3>Price: {company.lastPrice}</h3>
         </div>
     );
 };
